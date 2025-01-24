@@ -1,0 +1,32 @@
+
+nohup python pretrain.py \
+    --model_name MOARecRoberta \
+    --model_path ./MiniLM \
+    --init_ckpt ./MiniLM/RecRoberta_init.bin \
+    --data_path ./pretrain_data \
+    --train_file train.json \
+    --dev_file dev.json \
+    --item_attr_file meta_data.json \
+    --domain_idx_file domain_idx.json \
+    --item2id_file smap.json \
+    --output_dir pretrain_log/MOARecRoberta \
+    --num_train_epochs 20 \
+    --gradient_accumulation_steps 32 \
+    --check_val_every_n_epoch 1 \
+    --preprocessing_num_workers 32 \
+    --dataloader_num_workers 32  \
+    --batch_size 8 \
+    --learning_rate 5e-5 \
+    --temp 0.05 \
+    --mlm_weight 0.1 \
+    --use_moa \
+    --adapter_type LoRA  \
+    --num_adapter_layer 24 \
+    --num_adapter 8 \
+    --adapter_top_k 8 \
+    --adp_intermediate_size 128 \
+    --use_img \
+    --img_emb_path ./pretrain_data/img_emb_beit3.npy\
+    --img_marks_path ./pretrain_data/has_img_beit3.npy\
+    --device 0 1 2 3 4 5 6 7 \
+    --fp16 > pretrain_MOA_MiniLM.log 2>&1 &
