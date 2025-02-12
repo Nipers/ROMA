@@ -1,8 +1,8 @@
-# Reo-LM
+# ROMA
 
 This is the official Pytorch implementation for the paper:
 
-> Recommendation-oriented Pre-training for Universal Multi-modal Sequence Representation with Language Models
+> ROMA: Recommendation-Oriented Language Model Adaptation Using Multi-Modal Multi-Domain Item Sequences
 
 ## Method Overview
 
@@ -37,7 +37,7 @@ Our experiments are conducted on one assembled upstream pre-training datasets an
 
 ## Quick Start
 
-Considering the requirement of anonymity and the size limitation, we provide the data of the *Scientific* domain and a Reo-LM checkpoint fine-tuned on it for review. 
+Considering the requirement of anonymity and the size limitation, we provide the data of the *Scientific* domain and a ROMA checkpoint fine-tuned on it for review. 
 
 Our supplementary materials include a directory named `Scientific` and a checkpoint file named `Scientific.ckpt`, please unzip them and put them in the same directory as `test.sh`, then you can run 
 
