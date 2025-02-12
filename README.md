@@ -51,7 +51,7 @@ Further validation and open-source implementation will be available after peer r
 
 ## Overall performance of all methods
 
-![image-2](./asset/exp_result.png)
+![image-2](./asset/exp_result.jpg)
 
 ## Acknowledgement
 
